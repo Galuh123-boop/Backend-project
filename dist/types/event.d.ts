@@ -1,0 +1,10 @@
+export interface Event {
+    id: number;
+    name: string;
+    date: Date;
+    location: string;
+    description?: string;
+    categoryId?: number;
+    createdAt?: Date;
+}
+//# sourceMappingURL=event.d.ts.map
