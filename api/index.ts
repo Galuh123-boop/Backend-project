@@ -6,6 +6,7 @@ import categoryRoutes from '../src/routes/categoryRoute.js';
 import pembicaraRoutes from '../src/routes/pembicaraRoute.js';
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -19,3 +20,7 @@ app.use('/category', categoryRoutes);
 app.use('/pembicara', pembicaraRoutes);
 
 export default app;
+
+app.listen(PORT, () => { 
+ console.log(`Server is running on http://localhost:${PORT}`); 
+});
